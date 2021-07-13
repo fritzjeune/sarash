@@ -1,6 +1,7 @@
 var hamburger = document.querySelector(".hamburger");
 var menu = document.querySelector(".nav-link-box");
 var navlink = document.querySelectorAll(".nav-lin");
+var cardItemDress = document.querySelectorAll(".card-prod");
 
 hamburger.addEventListener("click", ()=> {
     hamburger.classList.toggle("fa-bars")
@@ -12,72 +13,22 @@ hamburger.addEventListener("click", ()=> {
     
 });
 
-// function isInViewport(el) {
-//     var top = el.offsetTop;
-//     var left = el.offsetLeft;
-//     var width = el.offsetWidth;
-//     var height = el.offsetHeight;
-  
-//     while(el.offsetParent) {
-//       el = el.offsetParent;
-//       top += el.offsetTop;
-//       left += el.offsetLeft;
-//     }
-  
-//     return (
-//       top < (window.pageYOffset + window.innerHeight) &&
-//       left < (window.pageXOffset + window.innerWidth) &&
-//       (top + height) > window.pageYOffset &&
-//       (left + width) > window.pageXOffset
-//     );
-//   }
+var slideIndex = 0;
+showSlides();
 
-// // function isInViewport2(el) {
-// //     const rect = el.getBoundingClientRect();
-// //     return (
-// //         rect.top >= -50 &&
-// //         rect.left >= 0 &&
-// //         rect.bottom <= (document.documentElement.clientHeight + 50) &&
-// //         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-
-// //     );
-// // }
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("slide");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  setTimeout(showSlides, 6000); // Change image every 2 seconds
+}
 
 
-
-    
-
-
-// const message = document.querySelector('#message');
-
-// document.addEventListener('scroll', function () {
-//     cards.forEach(card => {
-//         const btnBoxes = document.querySelectorAll('.btn-card-cont');
-//         console.log(isInViewport(card))
-//         if (isInViewport(card)) {
-//             const box = card.getElementsByClassName("btn-card-cont");
-//             box[0].classList.add("btn-card-up");
-//             // card..forEach(this.box => {
-//             //     box.classList.add("btn-card-up")
-//             // });
-            
-//         } else {
-//             btnBoxes.forEach(box => {
-//                 box.classList.remove("btn-card-up")
-//             });
-//         }
-//     });
-    
-//     // const messageText = isInViewport(box) ?
-//     //     'The box is visible in the viewport' :
-//     //     'The box is not visible in the viewport';
-        
-
-//     // message.textContent = messageText;
-
-// }, {
-//     passive: true
-// });
 
 
 

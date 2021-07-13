@@ -32,12 +32,12 @@
                 </ul>
             </div>
             <div>
-                <img src="./statics/images/sarash-logo.jpeg" class="logo" alt="" srcset="">
+                <a href="./index.html"><img src="./statics/images/sarash-logo.jpeg" class="logo" alt="" srcset=""></a>
             </div>
             <div class="nav-link-cont nav-right">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-shopping-cart"></i>
-                <i class="fas fa-user-circle"></i>
+                <a href=""><i class="fas fa-heart"></i></a>
+                <a href="./chekout.html"><i class="fas fa-shopping-cart"></i></a>
+                <a href="./login.html" target="_self" rel="noopener noreferrer"><i class="fas fa-user-circle"></i></a>
             </div>
         </nav>
 
@@ -46,7 +46,14 @@
             <div class="img-viewer">
                 <h2 class="item-title" style="margin-left: 20px;">The dress Title or Name</h2>
                 <div class="img-box">
-                    <img src="./statics/images/dress2.jpg" alt="" srcset="">
+                    <div class="images-box">
+                        <img class="mySlides" src="./statics/images/dress2.jpg" alt="" srcset="">
+                        <img class="mySlides" src="./statics/images/dress3.jpg" alt="" srcset="">
+                        <img class="mySlides" src="./statics/images/dress4.jpg" alt="" srcset="">
+                        <img class="mySlides" src="./statics/images/dress5.jpg" alt="" srcset="">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     <i class="fas fa-heart"></i>
                     <div class="rate-info">
                         <div>
@@ -60,10 +67,10 @@
                     <h4 class="item-price">US$200</h4>
                 </div>
                 <div class="item-thumb">
-                    <img src="./statics/images/dress2.jpg" alt="" srcset="">
-                    <img src="./statics/images/dress2.jpg" alt="" srcset="">
-                    <img src="./statics/images/dress2.jpg" alt="" srcset="">
-                    <img src="./statics/images/dress2.jpg" alt="" srcset="">
+                    <img class="demo" onclick="currentSlide(1)" src="./statics/images/dress2.jpg" alt="" srcset="">
+                    <img class="demo" onclick="currentSlide(2)" src="./statics/images/dress3.jpg" alt="" srcset="">
+                    <img class="demo" onclick="currentSlide(3)" src="./statics/images/dress4.jpg" alt="" srcset="">
+                    <img class="demo" onclick="currentSlide(4)" src="./statics/images/dress5.jpg" alt="" srcset="">
                 </div>
 
                 <div class="item-details">
@@ -184,7 +191,37 @@
             <h6 class="copyr">&copy;Copyright 2021 All right reserved. Made by Smath Cadet and Team.</h5>
         </footer>
     </div>
-    <script src="./anim.js">
+    <script src="./anim.js"></script>
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        // var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        // captionText.innerHTML = dots[slideIndex-1].alt;
+        }
     </script>
 </body>

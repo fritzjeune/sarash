@@ -36,9 +36,10 @@ i {
     margin:auto
 }
 
-.img-viewer > div.img-box > img {
+.img-viewer > div.img-box > div > img {
     width: 100%;
     margin-top: 20px;
+    display: none;
 }
 
 .img-viewer > div.img-box > i {
@@ -47,6 +48,32 @@ i {
     position: absolute;
     top: 30px;
     right: 15px;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .img-viewer > div.img-box > i:hover {
@@ -103,12 +130,13 @@ i {
 }
 
 .item-action > button {
-    width: 120px;
+    width: 150px;
     padding: 10px;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     font-weight: bold;
     border: none;
+    border-radius: 5px;
     /* font-family: var(--font-principal); */
 }
 
@@ -161,7 +189,7 @@ i {
 }
 
 .dress > div {
-    height: ;
+    /* height: ; */
 }
 
 .dress > div > img {
@@ -211,11 +239,14 @@ i {
 
 .a-link {
     display: inline-block;
+    width: 170px;
+    text-align: center;
     text-decoration: none;
-    border: 1px solid var(--primary-color);
+    /* border: 1px solid var(--primary-color); */
     background-color: var(--primary-color);
     color: var(--secondary-color);
     padding: 10px 30px;
+    border-radius: 5px;
     margin-top: 20px;
 }
 

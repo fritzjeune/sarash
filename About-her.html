@@ -45,18 +45,18 @@
         </nav>
 
         <div class="creator-pres">
-            <img src="./statics/images/sarah.png" alt="picture de Sarah" srcset="">
+            <img class="pic-sarah" src="./statics/images/sarah.png" alt="picture de Sarah" srcset="">
             <div class="historia">
                 <h1 class="section-title">Una Historia de gran determinacion</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor numquam quibusdam et aliquam explicabo distinctio sunt? Veniam alias recusandae sequi eligendi quidem aperiam, illum nisi Error praesentium fugiat quidem, animi corrupti repellendus reprehenderit, sunt delectus alias ab, officia possimus ut veniam laborum saepe provident quo ducimus quia. Dolorum corrupti amet magni, nesciunt labore ex velit? Magni laudantium impedit doloribus iste? Illo, cumque. Velit excepturi exercitationem iure commodi odio, consectetur dolores laudantium alias quas ducimus autem, cupiditate voluptates rem asperiores magnam natus aliquam quod harum sit enim iste quasi? Repudiandae pariatur atque fugit, saepe aliquam accusantium alias laboriosam distinctio consequuntur voluptatibus, id voluptatem asperiores ex. Sit?</p><br>
 
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, consequuntur? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, tempore?</p><br>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, similique consectetur! Maxime quam, accusamus consequuntur officiis nobis ducimus corrupti, tempore quis natus, ipsa autem distinctio omnis explicabo delectus saepe veniam optio modi maiores officia necessitatibus. Excepturi, quidem! Ad amet eos enim, sit exercitationem, illo atque facilis dolore illum explicabo temporibus.</p><br>
-
+                <h3>Lorem ipsum dolor sit amet.</h3> <br>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, similique consectetur! Maxime quam, accusamus consequuntur officiis nobis ducimus corrupti, tempore quis natus, ipsa autem distinctio omnis explicabo delectus saepe veniam optio modi maiores officia necessitatibus. Excepturi, quidem! Ad amet eos enim, sit exercitationem, illo atque facilis dolore illum explicabo temporibus.</p><br>
 
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, similique consectetur! Maxime quam, accusamus consequuntur officiis nobis ducimus corrupti, tempore quis natus, ipsa autem distinctio omnis explicabo delectus saepe veniam optio modi maiores officia necessitatibus. Excepturi, quidem! Ad amet eos enim, sit exercitationem, illo atque facilis dolore illum explicabo temporibus.</p><br>
-
+                <h3>Lorem ipsum dolor sit amet.</h3> <br>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Pariatur, similique consectetur! Maxime quam, accusamus consequuntur officiis nobis ducimus corrupti, tempore quis natus, ipsa autem distinctio omnis explicabo delectus saepe veniam optio modi maiores officia necessitatibus. Excepturi, quidem! Ad amet eos enim, sit exercitationem, illo atque facilis dolore illum explicabo temporibus.</p><br>
             </div>
             <div class="more-about-me historia">
@@ -64,7 +64,7 @@
                 <div class="social-media-links">
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-twitter"></i>
-                    <i class="fab fa-instagram"></i>
+                    <i onclick="window.location='https://www.instagram.com/officialsarashnyc/';" class="fab fa-instagram"></i>
                     <i class="fab fa-snapchat-ghost"></i>
                     <i class="fab fa-youtube"></i>
                     <i class="fab fa-pinterest-p"></i>
@@ -85,8 +85,12 @@
             <h6 class="copyr">&copy;Copyright 2021 All right reserved. Made by Smath Cadet and Team.</h5>
         </footer>
     </div>
-    <script src="./anim.js">
-
+    <script src="./anim.js"></script>
+    <script src="./scroll-out.min.js"></script>
+    <script>
+        ScrollOut({
+            targets: '.pic-sarah, .historia'
+        })
     </script>
 </body>
 </html>

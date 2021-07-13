@@ -43,12 +43,13 @@ i {
 
 .nav-link-box {
     position: absolute;
-    top: 60px;
+    top: 50px;
     left: 0;
     transform: translateX(-80vw);
     width: 80vw;
     height: 80vh;
     padding-top: 20px;
+    z-index: 99;
     background-color: var(--primary-color);
     transition: transform 500ms ease-in-out;
 }
@@ -189,6 +190,7 @@ i {
     width: 100%;
     height: calc(100vh - 60px);
     font-family: var(--font-principal);
+    animation: fade 900ms ease-in-out;
 }
 
 .slide > img {
@@ -208,6 +210,10 @@ i {
     justify-content: center;
 }
 
+.slide-info > h2 {
+    text-align: center;
+}
+
 .slide-info > a {
     width: fit-content;
     text-decoration: none;
@@ -224,6 +230,16 @@ i {
 .slide-info > a:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 /* products section */

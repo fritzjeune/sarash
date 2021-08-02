@@ -1,0 +1,46 @@
+:root {
+    --font-principal:  'Poppins', sans-serif;
+    --font-secondaria:  'Open Sans', sans-serif;
+    --secondary-color: #e4d298;
+    --sec-bg-color: #e4d29862;
+    --primary-color: #000;
+    --third-color: #fff;
+    --card-bg: #5c5b5b18;
+    --dress-action: rgba(0, 0, 0, 0.507);
+    --dress-bg-col: rgba(129, 129, 129, 0.11);
+}
+
+.contact-box {
+    padding: 40px;
+}
+
+.contact-box > p {
+    margin-bottom: 20px;
+}
+
+.response-contact {
+    height: 70vh;
+    border-radius: 5px;
+    background-color: var(--sec-bg-color);
+    position: relative;
+}
+
+.response-contact > h1 {
+    text-align: center;
+}
+
+.response-contact > div {
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.response-contact > div > p {
+    margin-bottom: 20px;
+}
+
+form > textarea {
+    width: 100%;
+}

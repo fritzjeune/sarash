@@ -1,0 +1,55 @@
+include includes/header.pug
+.wrapper 
+    .item-adm-box 
+        h1.section-title Items and Collections Management 
+        p to edit an item or a collection, first find the item or collections using the search bar.
+        form(action="", method="get")
+            input#item-search(type="text", name="item-search", placeholder="Seach item or collection")
+            button(type="submit") 
+                svg.icon__icon(xmlns="http://www.w3.org/2000/svg", viewBox="-2 -2 24 24", width="24", height="24", preserveAspectRatio="xMinYMin")
+                    path(fill="red", d="M15.5,14 L14.71,14 L14.43,13.73 C15.41,12.59 16,11.11 16,9.5 C16,5.91 13.09,3 9.5,3 C5.91,3 3,5.91 3,9.5 C3,13.09 5.91,16 9.5,16 C11.11,16 12.59,15.41 13.73,14.43 L14,14.71 L14,15.5 L19,20.49 L20.49,19 L15.5,14 Z M9.5,14 C7.01,14 5,11.99 5,9.5 C5,7.01 7.01,5 9.5,5 C11.99,5 14,7.01 14,9.5 C14,11.99 11.99,14 9.5,14 Z") 
+        hr
+        h3.separation -or-
+        div.item-action 
+            button Add Collection
+            button Add Article
+        
+        .add-item-box 
+            form(action="", method="post") 
+                input#art-name(type="text", name="art-name", placeholder="Title")
+                textarea#art-descrip(name="art-descrip", cols="30", rows="5", placeholder="Add a Description") 
+                div 
+                    label(for="main-picture") Picture 
+                    input#main-picture(type="file", name="main-picture")
+                .two-col
+                    div
+                        label(for="size") Size 
+                        select#size(name="size") 
+                            option(value="XS") XS
+                            option(value="XS") XS
+                            option(value="XS") S
+                            option(value="XS") M
+                            option(value="XS") L
+                            option(value="XS") XL
+                    div
+                        label(for="number-avail") Number
+                        input#number-avail(type="number", name="number-avail")
+                    div 
+                        label(for="color-avail") Color  
+                        input#color-avail(type="color", name="color-avail")
+                    div
+                        label(for="price") Price 
+                        input#price(type="number", name="price")
+
+                label(for="pictures") Pictures 
+                input#pictures(type="file", name="pictures" multiple)
+                
+            
+
+                    
+
+
+        
+
+
+include includes/footer.pug

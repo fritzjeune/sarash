@@ -1,0 +1,85 @@
+include includes/header.pug
+
+
+.row.check-out-box
+    h1 Check Out
+    .col-25
+        .cart-box
+            - var items = cartItems;
+            .cart-item
+                h4 Cart 
+                i.fa.fa-shopping-cart 
+                    b= items.length
+            .cart-item-box
+                    
+                each item in items
+                    .cart-item
+                        .cart-art-info
+                            img.art-thumb(src="./public/images/" + item.href , alt="", srcset="")
+                            div 
+                                p.cart-art-title= item.title
+                                p.lot-number= item.lot
+                        h4.cart-art-price= item.price
+            .cart-item 
+                p Total:
+                h4.cart-art-price US$1295
+            .cart-item 
+                button#ctnSopping Continue Shopping
+                button#checkOutbtn Check out
+
+    .col-75.hide-payment#billing-info
+        .container 
+            form(action="", method="post")
+                .row 
+                    .col-50 
+                        h3 Billing Address
+                        label(for="fname")
+                            i.fa.fa-user 
+                            span Full name
+                        input#fname(type="text", name="fname", placeholder="John M. Doe")
+                        label(for="email")
+                            i.fa.fa-envelope 
+                            span Email
+                        input#email(type="text", name="email", placeholder="john@example.com")
+                        label(for="adr")
+                            i.fa.fa-address-card-o
+                            span Address 
+                        input#adr(type="text", name="address", placeholder="542 W. 15th Street")
+                        label(for="city")
+                            i.fa.fa-institution
+                            span City 
+                        input#city(type="text", name="city",placeholder="New York")
+                        .row 
+                            .col-50 
+                                label(for="state") State
+                                input#state(type="text", name="state", placeholder="NY")
+                            .col-50 
+                                label(for="zip") Zip
+                                input#zip(type="text", name="zip", placeholder="10001")
+                    .col-50
+                        h3 Payment 
+                        label(for="fname") Accepted Cards 
+                        .icon-container 
+                            i.fa.fa-cc-visa(style="color: navy;")
+                            i.fa.fa-cc-amex(style="color: blue;")
+                            i.fa.fa-cc-mastercard(style="color: red;")
+                            i.fa.fa-cc-discover(style="color: orange;")
+                        label(for="cname") Name on Card
+                        input#cname(type="text", name="cardname", placeholder="John More Doe")
+                        label(for="ccnum") Credit Card Number 
+                        input#ccnum(type="text", name="cardnumber", placeholder="1111-2222-3333-4444")
+                        label(for="expmonth") Exp Month
+                        input#expmonth(type="text", name="expmonth", placeholder="September")
+                        .row 
+                            .col-50 
+                                label(for="expyear") Exp Year 
+                                input#expyear(type="text", name="expyear", placeholder="2018")
+                            .col-50 
+                                label(for="cvv") Exp Year 
+                                input#cvv(type="text", name="cvv", placeholder="352")
+                label(for="")
+                    input(type="checkbox", name="sameadr", checked="checked") 
+                    span Shipping address same as billing
+                input.btn(type="submit", value="Continue to checkout")
+
+include includes/footer.pug

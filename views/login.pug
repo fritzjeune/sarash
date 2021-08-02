@@ -1,0 +1,27 @@
+include includes/header.pug
+
+.sign-up-in
+    .form-parent 
+        .form-container.signup 
+            form(action="", method="post")
+                h2.form-title Sign Up 
+                input#sign-email(type="email", name="email", placeholder="Email") 
+                input#sign-password(type="password", name="password", placeholder="Password")
+                input#conf-password(type="password", name="conf-password", placeholder="Confirm Password")
+                button(type="submit") Create Account 
+                h4.warning Already have an account? please
+                    span#a-login-in  login instead.
+        .form-container.login 
+            form(action="", method="get") 
+                h2.form-title Login 
+                input#log-email(type="email", name="email", placeholder="Email") 
+                input#password(type="password", name="password", placeholder="Password")
+                button(type="submit") Login
+                h4.warning Dont have an account? please 
+                    span#a-sign-up !{" "}sign up first.
+
+
+
+
+include includes/footer.pug
+script(src="../public/js/login.js") 

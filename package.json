@@ -1,0 +1,31 @@
+{
+  "name": "sarash",
+  "version": "1.0.0",
+  "description": "the Sarash New york page FE server",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fritzjeune/sarash.git"
+  },
+  "author": "Fritz Jeune and Smath Cadet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fritzjeune/sarash/issues"
+  },
+  "homepage": "https://github.com/fritzjeune/sarash#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}

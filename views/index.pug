@@ -1,0 +1,78 @@
+
+
+
+include includes/header.pug 
+
+.banner 
+    -   
+        var slides = [
+            {
+                title: "Women Dress",
+                path: "dress0.jpg"
+            },
+            {
+                title: "New Fashion for wondefull women",
+                path: "dress1.jpg"
+            },
+            {
+                title: "Catalinas of Georgoes girl!",
+                path: "dress2.jpg"
+            },
+            {
+                title: "The trend of the 20th Century",
+                path: "dress3.jpg"
+            }
+        ];
+    each slide in slides 
+        .slide 
+            img(src="./public/images/" + slide.path, alt="", srcset="")
+            .slide-info 
+                h2.slide-text= slide.title
+                a(href="") See more
+
+.featured-products
+    h1.section-title Featured Products
+    -  
+        var items = articles;
+
+    each item in items 
+        
+        .card-prod(onclick=`clickItem(${item.uid})`, id=item.uid)
+            .card-img-cont 
+                img.card-img(src="./public/images/" + item.imageURL, alt="")
+                .btn-card-cont 
+                    svg.icon__icon(onclick="window.location='/events';", xmlns="http://www.w3.org/2000/svg", viewBox="-2 -4 24 24", width="24", height="24", preserveAspectRatio="xMinYMin")
+                        path(d="M3.636 7.208L10 13.572l6.364-6.364a3 3 0 1 0-4.243-4.243L10 5.086l-2.121-2.12a3 3 0 0 0-4.243 4.242zM9.293 1.55l.707.707.707-.707a5 5 0 1 1 7.071 7.071l-7.07 7.071a1 1 0 0 1-1.415 0l-7.071-7.07a5 5 0 1 1 7.07-7.071z") 
+                    svg.icon__icon(xmlns="http://www.w3.org/2000/svg", viewBox="-3 -5 24 24", width="24", height="24", preserveAspectRatio="xMinYMin")
+                        path(d="M7 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm7 0a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM.962 1.923A.962.962 0 0 1 .962 0h1.151c.902 0 1.682.626 1.878 1.506l1.253 5.642c.196.88.976 1.506 1.878 1.506h7.512l1.442-5.77H6.731a.962.962 0 0 1 0-1.922h9.345a1.923 1.923 0 0 1 1.866 2.39L16.5 9.12a1.923 1.923 0 0 1-1.866 1.457H7.122a3.846 3.846 0 0 1-3.755-3.012L2.113 1.923H.962z") 
+            .card-body 
+                h3.card-title= item.title
+                p.card-text.rating= item.ratings 
+                p.card-price= "$US" + item.price
+
+.self-introduction 
+    img(src="./public/images/sarah.png", alt="", srcset="")
+    h2.self-name Sarah L. Gonzalez
+    p.self-intro Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, aut!
+    a(href="/about-me") Read More 
+.social-media 
+    include ./includes/medias.pug  
+    .news-suscript 
+        form(action="/suscribe", method="post") 
+            h3.news-invite Don't wanna miss mews about new collections? please suscribe to our newsletter.
+            input#email(type="email", name="email", placeholder="Enter your Email")
+            button(type="submit") Suscribe
+
+
+include includes/footer.pug
+//- script 
+//-     include ../public/js/scroll-out.min.js
+//-     include ../public/js/anim.js
+//-     include ../public/js/nav.js
+script.  
+    ScrollOut({
+        targets: '.card-prod, .card-img, .btn-card-cont'
+    })
+
+
+    

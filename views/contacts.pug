@@ -1,0 +1,16 @@
+include includes/header.pug
+
+.contact-box
+    h1.section-title Contact Us
+    p Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        b Soluta, 
+        | repellat natus architecto ullam earum autem reiciendis doloribus corporis iusto, iure totam facere assumenda laudantium. 
+    form(action="/contacts", method="post") 
+        input#fname(type="text", name="fname", placeholder="Your full Name:")
+        input#email(type="email", name="email", placeholder="Your email Adress")
+        input#order-num(type="text", name="order-num", placeholder="Your Order Number:")
+        textarea#message(name="message", cols="30", rows="10") 
+        button(type="submit") Send Message
+
+
+include includes/footer.pug

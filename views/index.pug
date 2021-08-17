@@ -3,7 +3,7 @@
 
 include includes/header.pug 
 
-.banner 
+.banner.owl-carousel.owl-four
     -   
         var slides = [
             {
@@ -31,7 +31,7 @@ include includes/header.pug
                 a(href="") See more
 
 .featured-products
-    h1.section-title Featured Products
+    h1.section-title Latest fashions 
     -  
         var items = articles;
 
@@ -49,7 +49,8 @@ include includes/header.pug
                 h3.card-title= item.title
                 p.card-text.rating= item.ratings 
                 p.card-price= "$US" + item.price
-
+    .a-link-box 
+        a.a-link(href="") Go to Collections
 .self-introduction 
     img(src="./public/images/sarah.png", alt="", srcset="")
     h2.self-name Sarah L. Gonzalez
@@ -73,6 +74,8 @@ script.
     ScrollOut({
         targets: '.card-prod, .card-img, .btn-card-cont'
     })
+script(src="../public/js/owl.carousel.min.js")
+script(src="../public/js/anim.js")
 
 
     

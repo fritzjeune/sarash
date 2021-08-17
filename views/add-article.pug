@@ -11,39 +11,41 @@ include includes/header.pug
         hr
         h3.separation -or-
         div.item-action 
-            button Add Collection
-            button Add Article
+            a.a-link Add Collection
+            a.a-link Add Article
         
         .add-item-box 
             form(action="", method="post") 
-                input#art-name(type="text", name="art-name", placeholder="Title")
+                label(for="art-name") Title
+                input#art-name(type="text", name="art-name")
+                label(for="art-descrip") Description
                 textarea#art-descrip(name="art-descrip", cols="30", rows="5", placeholder="Add a Description") 
-                div 
-                    label(for="main-picture") Picture 
-                    input#main-picture(type="file", name="main-picture")
-                .two-col
-                    div
-                        label(for="size") Size 
-                        select#size(name="size") 
-                            option(value="XS") XS
-                            option(value="XS") XS
-                            option(value="XS") S
-                            option(value="XS") M
-                            option(value="XS") L
-                            option(value="XS") XL
-                    div
-                        label(for="number-avail") Number
-                        input#number-avail(type="number", name="number-avail")
-                    div 
-                        label(for="color-avail") Color  
-                        input#color-avail(type="color", name="color-avail")
-                    div
-                        label(for="price") Price 
-                        input#price(type="number", name="price")
-
-                label(for="pictures") Pictures 
-                input#pictures(type="file", name="pictures" multiple)
                 
+                label(for="main-picture") Picture 
+                input#main-picture(type="file", name="main-picture")
+                div    
+                    .two-col
+                        div
+                            label(for="size") Size 
+                            select#size(name="size") 
+                                option(value="XS") XS
+                                option(value="XS") XS
+                                option(value="XS") S
+                                option(value="XS") M
+                                option(value="XS") L
+                                option(value="XS") XL
+                        div
+                            label(for="number-avail") Number
+                            input#number-avail(type="number", name="number-avail")
+                        div 
+                            label(for="color-avail") Color  
+                            input#color-avail(type="color", name="color-avail")
+                        div
+                            label(for="price") Price 
+                            input#price(type="number", name="price")
+                    label(for="pictures") Pictures 
+                    input#pictures(type="file", name="pictures" multiple)
+                    button.btn(type="submit") Add Item
             
 
                     

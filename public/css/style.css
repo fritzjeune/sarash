@@ -106,6 +106,9 @@ svg:hover path {
 .nav-link-in:nth-child(6) {
     animation: slide-in 800ms 100ms ease-in-out forwards;
 }
+.nav-link-in:nth-child(7) {
+    animation: slide-in 900ms 100ms ease-in-out forwards;
+}
 
 @keyframes slide-in{
     0% {
@@ -522,6 +525,7 @@ footer > h6 {
 
 .item-adm-box {
     padding: 20px 40px;
+
 }
 
 .item-adm-box > p {
@@ -539,6 +543,15 @@ footer > h6 {
     border-radius: 5px 0 0 5px;
 }
 
+h3.separation {
+    text-align: center;
+    margin: 5px auto;
+}
+
+div.item-action {
+    margin-bottom: 20px;
+}
+
 .item-adm-box > form > button {
     width: fit-content;
     display: flex;
@@ -550,7 +563,37 @@ footer > h6 {
     background-color: var(--secondary-color);
 }
 
+.add-item-box {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: var(--card-bg);
+}
+
 .two-col {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.two-col > div {
+    width: 100%;
+    margin-top: 10px;
+    /* background-color: blue; */
+}
+
+.two-col > div > input {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.2rem;
+}
+
+input[type="file"] {
+    background-color: var(--card-bg);
+}
+
+input[type="color"], .two-col > div > select {
+    height: 43px;
+    width: 100%;
+    border: none;
 }

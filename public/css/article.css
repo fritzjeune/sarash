@@ -31,7 +31,7 @@ svg:hover path {
 
 .product-present {
     width: 100%;
-    padding: 20px;
+    /* padding: 20px; */
 }
 
 .img-viewer {
@@ -69,8 +69,8 @@ svg:hover path {
 }
 
 .dress-action > svg {
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     padding: 5px;
 }
 
@@ -163,12 +163,13 @@ svg:hover path {
 }
 
 .item-action {
-    display: flex;
+    display: grid;
     align-items: center;
-    justify-content: space-around;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr;
 }
 
-.item-action > button {
+/* .item-action > button {
     width: 150px;
     padding: 10px;
     background-color: var(--primary-color);
@@ -177,7 +178,7 @@ svg:hover path {
     border: none;
     border-radius: 5px;
     /* font-family: var(--font-principal); */
-}
+} */
 
 .item-action > button:hover {
     background-color: var(--secondary-color);
@@ -187,20 +188,50 @@ svg:hover path {
 /* recommended article sections  */
 
 .recommended-art {
-    padding: 20px;
+    margin-bottom: 20px;
 }
+
+.collection-head {
+    height: 250px;
+    position: relative;
+}
+
+.collection-head > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.collection-head > h2 {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    transform: translate(50%,50%);
+}
+
+.owl-dots {
+    display: none;
+}
+
+/* .col-title {
+    width: 100%;
+    background-color: var(--secondary-color);
+    height: 200px;
+    text-align: center;
+} */
 
 .rec-dress-box {
     width: 100%;
-    display: flex;
+    padding: 20px;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-around;
     gap: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; */
 }
 
 .dress {
-    width: calc(40vw - 10px);
+    /* width: calc(45vw - 10px); */
     border-radius: 5px;
     overflow: hidden;
     padding-bottom: 5px;
@@ -209,7 +240,7 @@ svg:hover path {
 }
 
 .dress > div.img-box {
-    height: 50vw;
+    height: 300px;
     position: relative;
 }
 
@@ -228,6 +259,10 @@ svg:hover path {
 .dress > .img-box:hover div.dress-action {
     transform: translateX(0px);
 }
+
+/* .dress > .img-box:active div.dress-action {
+    transform: translateX(0px);
+} */
 
 .dress-info {
     padding: 0px 10px;
@@ -251,7 +286,8 @@ svg:hover path {
 
 .a-link-box {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    /* padding-right: 20px; */
 }
 
 .a-link {
@@ -259,17 +295,18 @@ svg:hover path {
     min-width: 170px;
     text-align: center;
     text-decoration: none;
-    /* border: 1px solid var(--primary-color); */
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 30px;
-    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    /* background-color: var(--primary-color); */
+    color: var(--primary-color);
+    padding: 5px 15px;
+    /* border-radius: 5px; */
     margin-top: 20px;
 }
 
 .a-link:hover {
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
 }
 
 

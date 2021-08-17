@@ -26,8 +26,6 @@ expLink.each(function() {
 
 
 var clickItem = (uid) => {
-  // console.log(uid.id);
   var url = `/articles/${uid.id}`
-  // console.log(url);
   window.location= url;
 }

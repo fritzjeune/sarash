@@ -14,6 +14,10 @@
     --card-bg: #5c5b5b18;
 }
 
+/* .coll-container {
+    margin-bottom: 20px;
+} */
+
 .coll-content {
     width: 100%;
     display: grid;
@@ -24,9 +28,9 @@
     overflow: hidden;
 }
 
-.coll-dress {
+/* .coll-dress {
     width: 50%;
-}
+} */
 
 .slide1 {
     height: 30vh;

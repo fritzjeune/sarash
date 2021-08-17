@@ -18,6 +18,10 @@
     margin-bottom: 20px;
 }
 
+.contact-box > form > input {
+    margin-bottom: 10px;
+}
+
 .response-contact {
     height: 70vh;
     border-radius: 5px;
@@ -37,7 +41,7 @@
     text-align: center;
 }
 
-.response-contact > div > p {
+.response-contact > p {
     margin-bottom: 20px;
 }
 

@@ -20,7 +20,7 @@ var Articles = [{
     title: "Modern Women Catalina",
     ratings: "⭐⭐⭐⭐⭐",
     viewsCount: 26,
-    imageURL: "dress0.jpg", 
+    imageURL: "dress11.jpg", 
     likesCount: 20,
     price: 135,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet temporibus aliquid nisi enim iure vitae quaerat laboriosam, modi sint voluptatum architecto praesentium quibusdam dicta labore laborum, quasi, reiciendis optio quisquam!",
@@ -370,7 +370,7 @@ app.post("/suscribe", (req, res) => {
     res.redirect("/")
 });
 
-const port = 5501;
+const port = 5500;
 app.listen(port, ()=> {
     console.log(`Sarash App is running on port ${port}`)
 });

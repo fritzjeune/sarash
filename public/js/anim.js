@@ -44,7 +44,7 @@ $(document).ready(function(){
 
 $(document).ready(function(){
   $(".owl-tree").owlCarousel({
-    loop:true,
+    loop:false,
     margin:20,
     responsiveClass:true,
     responsive:{

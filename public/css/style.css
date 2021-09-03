@@ -462,22 +462,24 @@ svg:hover path {
 }
 
 .news-suscript > form > input {
-    width: 80%;
+    width: calc(100% - 20px);
     display: block;
     margin: auto;
     padding: 10px;
+    border-radius: 0;
     border: 1px solid var(--primary-color);
     font: var(--font-principal);
 }
 
-.news-suscript > form > button {
-    font-weight: 700;
+.my-btn {
+    font-weight: 500;
     display: block;
     margin: 20px auto;
     text-transform: uppercase;
     background-color: var(--primary-color);
     color: var(--third-color);
     border: none;
+    border-radius: 0;
     font-family: var(--font-principal);
     padding: 10px 20px;
     width: fit-content;

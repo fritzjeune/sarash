@@ -28,7 +28,7 @@ include includes/header.pug
             img(src="./public/images/" + slide.path, alt="", srcset="")
             .slide-info 
                 h2.slide-text= slide.title
-                a(href="") See more
+                a(href="/collections/all") See more
 
 .featured-products
     h1.section-title Latest fashions 
@@ -50,7 +50,7 @@ include includes/header.pug
                 p.card-text.rating= item.ratings 
                 p.card-price= "$US" + item.price
     .a-link-box 
-        a.a-link(href="") Go to Collections
+        a.a-link(href="/collections/all") Go to Collections
 .self-introduction 
     img(src="./public/images/sarah.png", alt="", srcset="")
     h2.self-name Sarah L. Gonzalez

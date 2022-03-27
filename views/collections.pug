@@ -22,20 +22,20 @@ include includes/header.pug
         ];
     each slide in slides 
         .slide 
-            img(src="./public/images/" + slide.path, alt="", srcset="")
+            img(src="../public/images/" + slide.path, alt="", srcset="")
             .slide-info 
                 h2.slide-text= slide.title
 .coll-container
     - var items = articles
     .recommended-art
         div.collection-head
-            img(src="./public/images/women-dress-walp.jpg", alt="", srcset="")
+            img(src="../public/images/women-dress-walp.jpg", alt="", srcset="")
         h2.section-title.col-title New Fashion for real women 
         .rec-dress-box.owl-carousel.owl-two
             each dress in items 
                 .dress 
                     .img-box.dress-img 
-                        img(src="./public/images/" + dress.imageURL, alt="#{dress.title}")
+                        img(src="../public/images/" + dress.imageURL, alt="#{dress.title}")
                         .dress-action.dress-react
                             svg.icon__icon(xmlns="http://www.w3.org/2000/svg", viewBox="-2 -4 24 24", width="24", height="24", preserveAspectRatio="xMinYMin")
                                 path(fill="red", d="M3.636 7.208L10 13.572l6.364-6.364a3 3 0 1 0-4.243-4.243L10 5.086l-2.121-2.12a3 3 0 0 0-4.243 4.242zM9.293 1.55l.707.707.707-.707a5 5 0 1 1 7.071 7.071l-7.07 7.071a1 1 0 0 1-1.415 0l-7.071-7.07a5 5 0 1 1 7.07-7.071z") 
@@ -49,13 +49,13 @@ include includes/header.pug
 
     .recommended-art
         div.collection-head
-            img(src="./public/images/biki-2.jpg", alt="", srcset="")
+            img(src="../public/images/biki-2.jpg", alt="", srcset="")
         h2.section-title.col-title All in bikis
         .rec-dress-box.owl-carousel.owl-two
             each dress in items 
                 .dress 
                     .img-box.dress-img 
-                        img(src="./public/images/" + dress.imageURL, alt="#{dress.title}")
+                        img(src="../public/images/" + dress.imageURL, alt="#{dress.title}")
                         .dress-action.dress-react
                             svg.icon__icon(xmlns="http://www.w3.org/2000/svg", viewBox="-2 -4 24 24", width="24", height="24", preserveAspectRatio="xMinYMin")
                                 path(fill="red", d="M3.636 7.208L10 13.572l6.364-6.364a3 3 0 1 0-4.243-4.243L10 5.086l-2.121-2.12a3 3 0 0 0-4.243 4.242zM9.293 1.55l.707.707.707-.707a5 5 0 1 1 7.071 7.071l-7.07 7.071a1 1 0 0 1-1.415 0l-7.071-7.07a5 5 0 1 1 7.07-7.071z") 
@@ -69,13 +69,13 @@ include includes/header.pug
 
     .recommended-art
         div.collection-head
-            img(src="./public/images/women-dress-back.jpg", alt="", srcset="")
+            img(src="../public/images/women-dress-back.jpg", alt="", srcset="")
         h2.section-title.col-title Night editions
         .rec-dress-box.owl-carousel.owl-two
             each dress in items 
                 .dress 
                     .img-box.dress-img 
-                        img(src="./public/images/" + dress.imageURL, alt="#{dress.title}")
+                        img(src="../public/images/" + dress.imageURL, alt="#{dress.title}")
                         .dress-action.dress-react
                             svg.icon__icon(xmlns="http://www.w3.org/2000/svg", viewBox="-2 -4 24 24", width="24", height="24", preserveAspectRatio="xMinYMin")
                                 path(fill="red", d="M3.636 7.208L10 13.572l6.364-6.364a3 3 0 1 0-4.243-4.243L10 5.086l-2.121-2.12a3 3 0 0 0-4.243 4.242zM9.293 1.55l.707.707.707-.707a5 5 0 1 1 7.071 7.071l-7.07 7.071a1 1 0 0 1-1.415 0l-7.071-7.07a5 5 0 1 1 7.07-7.071z") 

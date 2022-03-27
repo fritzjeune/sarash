@@ -331,14 +331,14 @@ app.get("/collections/add-article", async (req, res) => {
     });
 }); 
 
-app.get("/collections", (req, res) => {
+app.get("/collections/all", (req, res) => {
     res.render("collections", {
         title: "Sarash: Collections",
         "articles": Articles
     });
 });
 
-app.get("/events", (req, res) => {
+app.get("/events/all", (req, res) => {
     res.render("events", {
         title: "Sarash: Events"
     });
